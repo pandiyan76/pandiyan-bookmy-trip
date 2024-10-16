@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Booking Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">BookMyTrip</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h2>Discover Your Next Adventure</h2>
+            <p style="padding-bottom: 20px;">Book unforgettable experiences, from hotels to flights and everything in between.</p>
+            <a href="#booking-form" class="btn-primary">Get Started</a>
+        </div>
+    </section>
+    
+    <section id="booking-form" class="booking-section">
+        <div class="container">
+            <h2>Book Your Trip</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" placeholder="Where to?" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-in">Check-in Date</label>
+                    <input type="date" id="check-in" name="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Check-out Date</label>
+                    <input type="date" id="check-out" name="check-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Confirm Booking</button>
+            </form>
+            <div id="confirmation-message" class="confirmation-message" style="display: none;">
+                Your booking is confirmed! Thank you for choosing BookMyTrip.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BookMyTrip. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('confirmation-message').style.display = 'block';
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <>
+    
+        <h1>This is a Heading</h1>
+        <p>This is a paragraph</p>>
+        <h1>This is a heading</h1>
+<p>This is a paragraph</p>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+    </script><br>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+        </script>
+        <svg width="400" height="120">
+            <rect x="10" y="10" width="200" height="100" stroke="red" stroke-width="6" fill="blue" />
+          </svg>
+</body>
+</html>
